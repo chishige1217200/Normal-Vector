@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def hosen(a, b):
+def normal_vector(a, b):
     return [a[1]*b[2]-b[1]*a[2], a[2]*b[0]-a[0]*b[2], a[0]*b[1]-a[1]*b[0]]  # 法線ベクトル計算
 
 
@@ -21,7 +21,7 @@ print("Input b. (Ex:\"-1,-0.8,1\")")
 b = list(map(float, input().split(",")))
 print("Input c. (Ex:\"1,-0.8,1\")")
 c = list(map(float, input().split(",")))
-d = hosen(vector(a, b), vector(b, c))
+d = normal_vector(vector(a, b), vector(b, c))
 
 print(d)
 print(vector_square_norm(d))
